@@ -1,15 +1,11 @@
 import java.util.Random;
 import java.util.Scanner;
 
-
 public class Main {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Random number = new Random();
-        final int rock = 0;
-        final int paper = 1;
-        final int scissors = 2;
         int playWinCount = 0;
         int compWinCount = 0;
         int playNum;
@@ -26,7 +22,7 @@ public class Main {
 
                 playNum = input.nextInt();
             } while (playNum > 2 || playNum < 0);
-            compNum = number.nextInt(2) + 1;
+            compNum = number.nextInt(3);
             System.out.print("Player threw ");
             switch (playNum) {
                 case 0: System.out.println("rock");
